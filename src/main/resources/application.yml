@@ -1,0 +1,24 @@
+server:
+  port: 8088
+spring:
+  #引入其他配置文件  其他配置文件名必须为  application-xxx.yml
+  profiles:
+    active: dev
+  mvc:
+    static-path-pattern: /templates/**
+  thymeleaf:
+    cache: false
+    prefix: classpath:/templates/
+#mybaties-plus
+mybatis-plus:
+  type-aliases-package: com.shop.pojo  #类型别名
+  #控制台打印sql
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true  #驼峰映射
+  global-config:
+    db-config:
+      logic-delete-field: flag    #全局逻辑删除字段值
+      logic-delete-value: 1       #逻辑已删除值  （默认为1）
+      logic-not-delete-value: 0   #逻辑未删除值  （默认为0）
+
