@@ -13,4 +13,5 @@ public class User {
     private Long id;
     private String uname;
     private String password;
+    private Long order_id;
 }
