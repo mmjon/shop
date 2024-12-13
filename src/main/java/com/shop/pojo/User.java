@@ -12,4 +12,5 @@ import lombok.Data;
 public class User {
     private Long id;
     private String uname;
+    private String password;
 }
